@@ -1,0 +1,15 @@
+# special configuration file to use save test framework: https://github.com/cqfn/save
+[general]
+    tags = ["check_only", "clang_tidy", "opensource"]
+    description = "Demo suite of clang tidy tests available in opensource"
+    suiteName = "Clang Tidy Tests"
+
+[warn]
+    execFlags = "-checks '*'"
+    testNameSuffix = ".*(\\.c)"
+    # pattern for actual warnings produced by tidy, for example: "warning: message [warning-name]
+    actualWarningsPattern=".*\\/(.*):(\\d+):(\\d+): (warning: .*)"
+
+    linePlaceholder = "@LINE"
+    exactWarningsMatch = false
+

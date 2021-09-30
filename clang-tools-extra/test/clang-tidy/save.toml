@@ -1,0 +1,8 @@
+# special configuration file to use save test framework: https://github.com/cqfn/save
+[general]
+    execCmd = "./clang-tidy-linux"
+    # example of expected tests CHECK-MESSAGES: :[[@LINE-1]]:12: warning: test [warning-name]
+    expectedWarningsPattern = "// CHECK-MESSAGES: :?\\[\\[(.+)\\]\\]:(\\d+): (.*)"
+    
+
+
